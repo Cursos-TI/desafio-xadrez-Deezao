@@ -6,7 +6,7 @@
 
 int main() {
    
-    printf("Faça o movimento da sua Torre \n");
+    printf("Movimento da Torre \n");
 
     //Movimento da peca Torre
     int t = 0;
@@ -16,44 +16,52 @@ int main() {
     
         if (t >= 0)
     {
-        printf("Torre faz o movimento para direita. \n"); //Direcao do movimento Torre
+        printf("Torre andou %d casas para direita. \n", t + 1); //Direcao do movimento Torre
     }
-
         t++;
-
     }
 
     //separacao dos movimentos das pecas
-    printf("\n");
+    printf("\n"); //pular linha
 
 
     //Movimento peca Bispo
 
-    int b;
-
-    do
-    {   
-        printf("Digite a quantidade de casas para movimentar o Bispo: \n");
-        scanf("%d", &b);
-
-        if(b <= 10){
-        printf("o Bispo efetuou %d movimentos para CIMA e DIREITA \n");
-      }      
-    } while (b != 10);
+    int b = 0;
     
-
+    printf("Movimento do Bispo: \n");
+    do {
+        b++;
+        printf("o Bispo efetuou %d movimentos para CIMA e DIREITA \n", b);
+    }   while (b < 5);
+    
+    
+    printf("\n"); //pular linha
     //Movimento da rainha
 
-    int r, movimento;
-
-    printf("Digite quantos movimentos quer efetuar com a Rainha: \n");
-    scanf("%d", &movimento);
-
-    for (r = 0; r < 8; r++)
-    {
-        printf("Rainha efetuou %d movimentos para esquerda! \n", r + movimento);
-    }
+    printf("Movimento da rainha: \n");
     
 
+    for (int r = 0; r < 8; r++)
+    {
+        printf("Rainha efetuou %d movimentos para esquerda! \n", r + 1);
+    }
+
+    printf("\n"); //pular linha
+
+    //MOVIMENTO DO CAVALO
+
+    printf("Movimento do Cavalo:\n");
+    
+     for (int i = 0; i < 1; i++)
+    {
+        {
+        for (int j = 2; j >= 1; j--)
+        printf("Cima \n");
+        }
+        
+    printf("Direita\n");
+    }
+
     return 0;
-}
+} 
