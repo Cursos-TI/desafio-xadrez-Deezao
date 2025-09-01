@@ -105,7 +105,7 @@ int main() {
     //do {
       //  b++;
         //printf("o Bispo efetuou %d movimentos para CIMA e DIREITA \n", b);
-   // }   while (b < 5);
+   // }   while (b < 5); 
     
     
     //printf("\n"); //pular linha
