@@ -5,30 +5,42 @@
 void MovimentoTorre(int torre ){
     if (torre > 0){
         MovimentoTorre(torre - 1); //mesmo que esteja diminuindo -1, o printf estando abaixo da condicao ele executa ao contrario da condicao
-        printf("Torre executou %d movimentos para a direita\n", torre);
+        printf("Torre andou para a Direita\n", torre);
     }
+    printf("Total de Movimentos da Torre : %d\n", torre);
+    printf("\n");
 }
 
 // Recursividade Bispo
 void MovimentoBispo(int bispo){
     if (bispo > 0){
         MovimentoBispo(bispo - 1);
-        printf("o Bispo executou %d movimentos para CIMA e DIREITA. \n", bispo);
+        for (int i = 0; i < 1; i++){ // CIMA
+            for (int j = 0; j < 1; j++){ // DIREITA
+                printf("o Bispo andou para CIMA. \n", bispo);
+            }
+            printf("o Bispo andou para DIREITA. \n", bispo);
+        }
+        printf("\n");
     }
-        
+    
+    printf("Total de Movimentos do Bispo : %d\n", bispo);
+    printf("\n");
 }
 
 // Recursividade Rainha
 void MovimentoRainha(int rainha){
     if (rainha > 0){
         MovimentoRainha(rainha - 1);
-        printf("Rainha executou %d movimentos para esquerda \n", rainha);
+        printf("Rainha andou para a Esquerda \n", rainha);
     }
+    printf("Total de Movimentos da Rainha : %d\n", rainha);
+    printf("\n");
 }
 
 int main() {
 
-   //Bispo
+   // ---------------------- TORRE ---------------------
 
     printf("Movimento da Torre \n");
 
@@ -36,7 +48,7 @@ int main() {
 
     printf("\n "); //pular linha
 
-    //Bispo
+    //-------------------- BISPO -------------------------
     
     printf("Movimento do Bispo \n");
 
@@ -45,7 +57,7 @@ int main() {
     printf("\n "); //pular linha
 
 
-    // Rainha
+    // ---------------------- RAINHA---------------------------
     
     printf("Movimento Rainha\n");
 
@@ -54,19 +66,19 @@ int main() {
     printf("\n "); //pular linha
 
 
-    // Cavalo
+    // ------------------- CAVALO -------------------------------
 
     printf("Movimento do Cavalo:\n");
     
-     for (int i = 0; i < 1; i++)//i = 0 e adicionado 1 no i++ sendo se i < 1 ele reproduz apenas uma vez
-    {
-        {
-        for (int j = 2; j >= 1; j--)// aqui o j é = 2, faça-se a pergunta se j >= 1 se sim ele executa o programa, logo após j-- diminui 2-1 tornando j = 1, faça-se a pergunta novamente se j >= 1 se sim executa o programa novamente.
-        printf("Cima \n");
+     for (int i = 0; i < 1; i++){//i = 0 e adicionado 1 no i++ sendo se i < 1 ele reproduz apenas uma vez
+            for (int j = 2; j >= 1; j--){// aqui o j é = 2, faça-se a pergunta se j >= 1 se sim ele executa o programa, logo após j-- diminui 2-1 tornando j = 1, faça-se a pergunta novamente se j >= 1 se sim executa o programa novamente.
+                printf("Cima \n");
+            }
+            printf("Direita\n");
         }
-        
-    printf("Direita\n");
-    }
+    
+    
+    
 
     return 0;
 } 
